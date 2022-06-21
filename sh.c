@@ -51,7 +51,24 @@ void maybe_change_ft(yed_buffer *buff) {
         return;
     }
 
-    if (strcmp(ext, "sh") == 0 || strcmp(ext, "bashrc") == 0 || strcmp(ext, "zshrc") == 0 || strcmp(ext, "zsh") == 0) {
+    if (strcmp(ext, "sh")           == 0
+    ||  strcmp(ext, "shrc")         == 0
+    ||  strcmp(ext, "shinit")       == 0
+    ||  strcmp(ext, "shenv")        == 0
+    ||  strcmp(ext, "profile")      == 0
+    ||  strcmp(ext, "login")        == 0
+    ||  strcmp(ext, "logout")       == 0
+    ||  strcmp(ext, "bash")         == 0
+    ||  strcmp(ext, "bashrc")       == 0
+    ||  strcmp(ext, "bash_profile") == 0
+    ||  strcmp(ext, "bash_login")   == 0
+    ||  strcmp(ext, "bash_logout")  == 0
+    ||  strcmp(ext, "zsh")          == 0
+    ||  strcmp(ext, "zshrc")        == 0
+    ||  strcmp(ext, "zshenv")       == 0
+    ||  strcmp(ext, "zshprofile")   == 0
+    ||  strcmp(ext, "zshlogin")     == 0
+    ||  strcmp(ext, "zshlogout")    == 0) {
         yed_buffer_set_ft(buff, yed_get_ft("Shell"));
     }
 }
