@@ -28,6 +28,8 @@ LOG_FN_ENTER();
     yed_plugin_add_event_handler(self, buff_post_load_handler);
     yed_plugin_add_event_handler(self, buff_pre_write_handler);
 
+    yed_set_var("Shell-comment-style", "#");
+
     tree_traverse(ys->buffers, bit) {
         maybe_change_ft(tree_it_val(bit));
     }
